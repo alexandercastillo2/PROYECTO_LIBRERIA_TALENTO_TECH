@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/libro.css">
+    <script type="text/javascript" src="js/libro.js"></script>
+    <title>BIBLIOTECA</title>
+</head>
+<body>
+    <form>
+
+        
+    <h1>BIBLIOTECA DEPARTAMENTAL COQUITO</h1>
+    <form onsubmit="consultarLibro(); return false">
+        <label for="isbn"><h3>ISBN</h3></label>
+        <input type="text" id="isbn"  name ="isbn" placeholder="ISBN">
+        <br/>
+        <label for="titulo"><h3>Titulo del libro</h3></label>
+        <input type="text" id="titulo" name="titulo" placeholder="Titulo">
+        <br/>
+        <label for="autor"><h3>Nombre Autor</h3></label>
+        <input type="text" id="autor" name="autor" placeholder="Autor">
+        <br/>
+        <label for="fechEdicion"><h3>Fecha  edición</h3></label> 
+        <input type="text" id="fechEdicion" placeholder="AAAA-MM-DD">
+        <br/><br/>
+        <button type="button" onclick="consultarLibro()">CONSULTAR LIBRO</button>
+        <button type="button" onclick="conLibxisbn()">CONSULTA X ISBN</button>
+        <button type="button" onclick="consultarAutor()">AUTOR</button>
+        <button onclick="eliminarAutor()">ELIMINAR AUTOR</button>
+        <button type="reset">LIMPIAR</button>
+        <button type="button" onclick="anadirlibro()">AÑADIR LIBRO</button>
+        <button type="button" onclick="BORRAR()">BORRAR LIBRO</button>
+        
+        
+
+   </form>
+
+   <table id="lstlib">
+    <thead>
+        <tr>
+            <th>ISBN</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Fecha de Edición</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<div id="msg"></div>
+
+</body>
+</html>
